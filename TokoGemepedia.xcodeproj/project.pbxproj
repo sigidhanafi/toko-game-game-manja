@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		E551FF5321DDE486005D6BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF5221DDE486005D6BD6 /* AppDelegate.swift */; };
-		E551FF5521DDE486005D6BD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF5421DDE486005D6BD6 /* ViewController.swift */; };
-		E551FF5821DDE486005D6BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E551FF5621DDE486005D6BD6 /* Main.storyboard */; };
+		E551FF5521DDE486005D6BD6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF5421DDE486005D6BD6 /* HomeViewController.swift */; };
 		E551FF5A21DDE488005D6BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E551FF5921DDE488005D6BD6 /* Assets.xcassets */; };
 		E551FF5D21DDE488005D6BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E551FF5B21DDE488005D6BD6 /* LaunchScreen.storyboard */; };
+		E551FF6E21DDE8A1005D6BD6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF6D21DDE8A1005D6BD6 /* HomeViewModel.swift */; };
+		FB39D6D017D1F34AACEDE5DE /* Pods_TokoGemepedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C34817B0B7564BEC3B85D4B /* Pods_TokoGemepedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F79136FAD422229F34710C6 /* Pods-TokoGemepedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoGemepedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia.release.xcconfig"; sourceTree = "<group>"; };
+		8C34817B0B7564BEC3B85D4B /* Pods_TokoGemepedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokoGemepedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E551FF4F21DDE486005D6BD6 /* TokoGemepedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokoGemepedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E551FF5221DDE486005D6BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E551FF5421DDE486005D6BD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E551FF5721DDE486005D6BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E551FF5421DDE486005D6BD6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E551FF5921DDE488005D6BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E551FF5C21DDE488005D6BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E551FF5E21DDE488005D6BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E551FF6D21DDE8A1005D6BD6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EC09F12ED923751333969655 /* Pods-TokoGemepedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoGemepedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB39D6D017D1F34AACEDE5DE /* Pods_TokoGemepedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74C224BBDBF123B14FD80004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C34817B0B7564BEC3B85D4B /* Pods_TokoGemepedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8689440EE8537B87543423DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC09F12ED923751333969655 /* Pods-TokoGemepedia.debug.xcconfig */,
+				2F79136FAD422229F34710C6 /* Pods-TokoGemepedia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E551FF4621DDE486005D6BD6 = {
 			isa = PBXGroup;
 			children = (
 				E551FF5121DDE486005D6BD6 /* TokoGemepedia */,
 				E551FF5021DDE486005D6BD6 /* Products */,
+				8689440EE8537B87543423DC /* Pods */,
+				74C224BBDBF123B14FD80004 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +78,86 @@
 		E551FF5121DDE486005D6BD6 /* TokoGemepedia */ = {
 			isa = PBXGroup;
 			children = (
+				E551FF6621DDE7FC005D6BD6 /* Result */,
+				E551FF6521DDE7F2005D6BD6 /* Quiz */,
+				E551FF6421DDE7D3005D6BD6 /* Home */,
 				E551FF5221DDE486005D6BD6 /* AppDelegate.swift */,
-				E551FF5421DDE486005D6BD6 /* ViewController.swift */,
-				E551FF5621DDE486005D6BD6 /* Main.storyboard */,
 				E551FF5921DDE488005D6BD6 /* Assets.xcassets */,
 				E551FF5B21DDE488005D6BD6 /* LaunchScreen.storyboard */,
 				E551FF5E21DDE488005D6BD6 /* Info.plist */,
 			);
 			path = TokoGemepedia;
+			sourceTree = "<group>";
+		};
+		E551FF6421DDE7D3005D6BD6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E551FF6821DDE817005D6BD6 /* Domain */,
+				E551FF6721DDE805005D6BD6 /* Scenes */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E551FF6521DDE7F2005D6BD6 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				E551FF6A21DDE829005D6BD6 /* Domain */,
+				E551FF6921DDE821005D6BD6 /* Scenes */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		E551FF6621DDE7FC005D6BD6 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				E551FF6C21DDE839005D6BD6 /* Domain */,
+				E551FF6B21DDE82F005D6BD6 /* Scenes */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		E551FF6721DDE805005D6BD6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E551FF5421DDE486005D6BD6 /* HomeViewController.swift */,
+				E551FF6D21DDE8A1005D6BD6 /* HomeViewModel.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E551FF6821DDE817005D6BD6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E551FF6921DDE821005D6BD6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E551FF6A21DDE829005D6BD6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E551FF6B21DDE82F005D6BD6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E551FF6C21DDE839005D6BD6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E551FF6121DDE488005D6BD6 /* Build configuration list for PBXNativeTarget "TokoGemepedia" */;
 			buildPhases = (
+				63690008678263B461BEEC4B /* [CP] Check Pods Manifest.lock */,
 				E551FF4B21DDE486005D6BD6 /* Sources */,
 				E551FF4C21DDE486005D6BD6 /* Frameworks */,
 				E551FF4D21DDE486005D6BD6 /* Resources */,
+				7B7D2208ECFEF367AC3EF889 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,18 +222,77 @@
 			files = (
 				E551FF5D21DDE488005D6BD6 /* LaunchScreen.storyboard in Resources */,
 				E551FF5A21DDE488005D6BD6 /* Assets.xcassets in Resources */,
-				E551FF5821DDE486005D6BD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63690008678263B461BEEC4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TokoGemepedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B7D2208ECFEF367AC3EF889 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E551FF4B21DDE486005D6BD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E551FF5521DDE486005D6BD6 /* ViewController.swift in Sources */,
+				E551FF5521DDE486005D6BD6 /* HomeViewController.swift in Sources */,
+				E551FF6E21DDE8A1005D6BD6 /* HomeViewModel.swift in Sources */,
 				E551FF5321DDE486005D6BD6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +300,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E551FF5621DDE486005D6BD6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E551FF5721DDE486005D6BD6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E551FF5B21DDE488005D6BD6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,6 +429,7 @@
 		};
 		E551FF6221DDE488005D6BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC09F12ED923751333969655 /* Pods-TokoGemepedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +448,7 @@
 		};
 		E551FF6321DDE488005D6BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F79136FAD422229F34710C6 /* Pods-TokoGemepedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
