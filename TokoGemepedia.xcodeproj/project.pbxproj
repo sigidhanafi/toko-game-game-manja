@@ -15,6 +15,12 @@
 		E551FF7321DDEB8E005D6BD6 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF7121DDEB8E005D6BD6 /* HomeCollectionViewCell.swift */; };
 		E551FF7421DDEB8E005D6BD6 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E551FF7221DDEB8E005D6BD6 /* HomeCollectionViewCell.xib */; };
 		E551FF7821DDED6F005D6BD6 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF7721DDED6F005D6BD6 /* Quiz.swift */; };
+		E577D94F21DDFED100794325 /* AceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D94E21DDFED100794325 /* AceTarget.swift */; };
+		E577D96221DDFF9200794325 /* SearchProductLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D95121DDFF9200794325 /* SearchProductLabel.swift */; };
+		E577D96521DDFF9200794325 /* SearchProductShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D95421DDFF9200794325 /* SearchProductShop.swift */; };
+		E577D96D21DDFF9200794325 /* SearchResultProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D95C21DDFF9200794325 /* SearchResultProduct.swift */; };
+		E577D96E21DDFF9200794325 /* SearchProductWholesale.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D95D21DDFF9200794325 /* SearchProductWholesale.swift */; };
+		E577D97221DDFF9200794325 /* SearchProductBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D96121DDFF9200794325 /* SearchProductBadge.swift */; };
 		FB39D6D017D1F34AACEDE5DE /* Pods_TokoGemepedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C34817B0B7564BEC3B85D4B /* Pods_TokoGemepedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +37,12 @@
 		E551FF7121DDEB8E005D6BD6 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E551FF7221DDEB8E005D6BD6 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		E551FF7721DDED6F005D6BD6 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		E577D94E21DDFED100794325 /* AceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AceTarget.swift; sourceTree = "<group>"; };
+		E577D95121DDFF9200794325 /* SearchProductLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductLabel.swift; sourceTree = "<group>"; };
+		E577D95421DDFF9200794325 /* SearchProductShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductShop.swift; sourceTree = "<group>"; };
+		E577D95C21DDFF9200794325 /* SearchResultProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultProduct.swift; sourceTree = "<group>"; };
+		E577D95D21DDFF9200794325 /* SearchProductWholesale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductWholesale.swift; sourceTree = "<group>"; };
+		E577D96121DDFF9200794325 /* SearchProductBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductBadge.swift; sourceTree = "<group>"; };
 		EC09F12ED923751333969655 /* Pods-TokoGemepedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoGemepedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,8 +96,7 @@
 		E551FF5121DDE486005D6BD6 /* TokoGemepedia */ = {
 			isa = PBXGroup;
 			children = (
-				E551FF6621DDE7FC005D6BD6 /* Result */,
-				E551FF6521DDE7F2005D6BD6 /* Quiz */,
+				E577D94B21DDFEBC00794325 /* Result */,
 				E551FF6421DDE7D3005D6BD6 /* Home */,
 				E551FF5221DDE486005D6BD6 /* AppDelegate.swift */,
 				E551FF5921DDE488005D6BD6 /* Assets.xcassets */,
@@ -104,24 +115,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		E551FF6521DDE7F2005D6BD6 /* Quiz */ = {
-			isa = PBXGroup;
-			children = (
-				E551FF6A21DDE829005D6BD6 /* Domain */,
-				E551FF6921DDE821005D6BD6 /* Scenes */,
-			);
-			path = Quiz;
-			sourceTree = "<group>";
-		};
-		E551FF6621DDE7FC005D6BD6 /* Result */ = {
-			isa = PBXGroup;
-			children = (
-				E551FF6C21DDE839005D6BD6 /* Domain */,
-				E551FF6B21DDE82F005D6BD6 /* Scenes */,
-			);
-			path = Result;
-			sourceTree = "<group>";
-		};
 		E551FF6721DDE805005D6BD6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,40 +126,49 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		E551FF6921DDE821005D6BD6 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		E551FF6A21DDE829005D6BD6 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		E551FF6B21DDE82F005D6BD6 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		E551FF6C21DDE839005D6BD6 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		E551FF7921DDF716005D6BD6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				E551FF7721DDED6F005D6BD6 /* Quiz.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		E577D94B21DDFEBC00794325 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				E577D94D21DDFEC700794325 /* Scenes */,
+				E577D94C21DDFEC100794325 /* Domain */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		E577D94C21DDFEC100794325 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E577D95021DDFF9200794325 /* Models */,
+				E577D94E21DDFED100794325 /* AceTarget.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E577D94D21DDFEC700794325 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E577D95021DDFF9200794325 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E577D95121DDFF9200794325 /* SearchProductLabel.swift */,
+				E577D95421DDFF9200794325 /* SearchProductShop.swift */,
+				E577D95C21DDFF9200794325 /* SearchResultProduct.swift */,
+				E577D95D21DDFF9200794325 /* SearchProductWholesale.swift */,
+				E577D96121DDFF9200794325 /* SearchProductBadge.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +183,7 @@
 				E551FF4C21DDE486005D6BD6 /* Frameworks */,
 				E551FF4D21DDE486005D6BD6 /* Resources */,
 				7B7D2208ECFEF367AC3EF889 /* [CP] Embed Pods Frameworks */,
+				0924401329286E9EEB1D4DB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,20 +241,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		63690008678263B461BEEC4B /* [CP] Check Pods Manifest.lock */ = {
+		0924401329286E9EEB1D4DB9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63690008678263B461BEEC4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-TokoGemepedia-checkManifestLockResult.txt",
 			);
@@ -265,8 +279,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -278,8 +290,6 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -301,11 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E577D96D21DDFF9200794325 /* SearchResultProduct.swift in Sources */,
 				E551FF5521DDE486005D6BD6 /* HomeViewController.swift in Sources */,
 				E551FF7821DDED6F005D6BD6 /* Quiz.swift in Sources */,
+				E577D96521DDFF9200794325 /* SearchProductShop.swift in Sources */,
+				E577D97221DDFF9200794325 /* SearchProductBadge.swift in Sources */,
 				E551FF6E21DDE8A1005D6BD6 /* HomeViewModel.swift in Sources */,
+				E577D96E21DDFF9200794325 /* SearchProductWholesale.swift in Sources */,
 				E551FF5321DDE486005D6BD6 /* AppDelegate.swift in Sources */,
+				E577D94F21DDFED100794325 /* AceTarget.swift in Sources */,
 				E551FF7321DDEB8E005D6BD6 /* HomeCollectionViewCell.swift in Sources */,
+				E577D96221DDFF9200794325 /* SearchProductLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,8 +460,9 @@
 			baseConfigurationReference = EC09F12ED923751333969655 /* Pods-TokoGemepedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R22GRAUJ59;
+				DEVELOPMENT_TEAM = CDEDSSA7HE;
 				INFOPLIST_FILE = TokoGemepedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sigidhanafi.TokoGemepedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,8 +481,9 @@
 			baseConfigurationReference = 2F79136FAD422229F34710C6 /* Pods-TokoGemepedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R22GRAUJ59;
+				DEVELOPMENT_TEAM = CDEDSSA7HE;
 				INFOPLIST_FILE = TokoGemepedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -472,6 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sigidhanafi.TokoGemepedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

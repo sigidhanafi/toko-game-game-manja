@@ -1,11 +1,12 @@
 PODS:
   - Alamofire (4.8.0)
-  - Moya (12.0.1):
-    - Moya/Core (= 12.0.1)
-  - Moya/Core (12.0.1):
+  - Moya/Core (10.0.2):
     - Alamofire (~> 4.1)
-    - Result (~> 4.0)
-  - Result (4.0.0)
+    - Result (~> 3.0)
+  - Moya/RxSwift (10.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - Result (3.2.4)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -14,30 +15,20 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
-  - Moya
+  - Moya/RxSwift (~> 10.0.2)
   - RxCocoa
   - RxSwift
   - SwiftyJSON
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
-    - Moya
-    - Result
-    - RxAtomic
-    - RxCocoa
-    - RxSwift
-    - SwiftyJSON
-
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
-  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: e1eefa59d7a5ecb23744ae23ac93ae21943c00ee
+PODFILE CHECKSUM: 085a3b2245adc63dac96f8b7a90a52b71a790da5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.3.1
