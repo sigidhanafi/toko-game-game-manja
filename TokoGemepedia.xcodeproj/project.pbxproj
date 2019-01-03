@@ -21,6 +21,10 @@
 		E577D96D21DDFF9200794325 /* SearchResultProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D95C21DDFF9200794325 /* SearchResultProduct.swift */; };
 		E577D96E21DDFF9200794325 /* SearchProductWholesale.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D95D21DDFF9200794325 /* SearchProductWholesale.swift */; };
 		E577D97221DDFF9200794325 /* SearchProductBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D96121DDFF9200794325 /* SearchProductBadge.swift */; };
+		E5FDF20B21DE0B9400ABBA14 /* QuizResultUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FDF20A21DE0B9400ABBA14 /* QuizResultUseCase.swift */; };
+		E5FDF20E21DE133F00ABBA14 /* QuizResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FDF20D21DE133F00ABBA14 /* QuizResultViewModel.swift */; };
+		E5FDF21321DE17DA00ABBA14 /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FDF21121DE17DA00ABBA14 /* QuizResultViewController.swift */; };
+		E5FDF21421DE17DA00ABBA14 /* QuizResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FDF21221DE17DA00ABBA14 /* QuizResultViewController.xib */; };
 		FB39D6D017D1F34AACEDE5DE /* Pods_TokoGemepedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C34817B0B7564BEC3B85D4B /* Pods_TokoGemepedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		E577D95C21DDFF9200794325 /* SearchResultProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultProduct.swift; sourceTree = "<group>"; };
 		E577D95D21DDFF9200794325 /* SearchProductWholesale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductWholesale.swift; sourceTree = "<group>"; };
 		E577D96121DDFF9200794325 /* SearchProductBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductBadge.swift; sourceTree = "<group>"; };
+		E5FDF20A21DE0B9400ABBA14 /* QuizResultUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultUseCase.swift; sourceTree = "<group>"; };
+		E5FDF20D21DE133F00ABBA14 /* QuizResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewModel.swift; sourceTree = "<group>"; };
+		E5FDF21121DE17DA00ABBA14 /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
+		E5FDF21221DE17DA00ABBA14 /* QuizResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizResultViewController.xib; sourceTree = "<group>"; };
 		EC09F12ED923751333969655 /* Pods-TokoGemepedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoGemepedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +145,7 @@
 		E577D94B21DDFEBC00794325 /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				E577D94D21DDFEC700794325 /* Scenes */,
+				E5FDF20C21DE133000ABBA14 /* Scenes */,
 				E577D94C21DDFEC100794325 /* Domain */,
 			);
 			path = Result;
@@ -148,15 +156,9 @@
 			children = (
 				E577D95021DDFF9200794325 /* Models */,
 				E577D94E21DDFED100794325 /* AceTarget.swift */,
+				E5FDF20A21DE0B9400ABBA14 /* QuizResultUseCase.swift */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		E577D94D21DDFEC700794325 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 		E577D95021DDFF9200794325 /* Models */ = {
@@ -171,6 +173,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E5FDF20C21DE133000ABBA14 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E5FDF20D21DE133F00ABBA14 /* QuizResultViewModel.swift */,
+				E5FDF21121DE17DA00ABBA14 /* QuizResultViewController.swift */,
+				E5FDF21221DE17DA00ABBA14 /* QuizResultViewController.xib */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +195,7 @@
 				E551FF4C21DDE486005D6BD6 /* Frameworks */,
 				E551FF4D21DDE486005D6BD6 /* Resources */,
 				7B7D2208ECFEF367AC3EF889 /* [CP] Embed Pods Frameworks */,
+				4D09BEB3B02D6C15D32A2535 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FDF21421DE17DA00ABBA14 /* QuizResultViewController.xib in Resources */,
 				E551FF5D21DDE488005D6BD6 /* LaunchScreen.storyboard in Resources */,
 				E551FF7421DDEB8E005D6BD6 /* HomeCollectionViewCell.xib in Resources */,
 				E551FF5A21DDE488005D6BD6 /* Assets.xcassets in Resources */,
@@ -240,6 +254,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4D09BEB3B02D6C15D32A2535 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		63690008678263B461BEEC4B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,11 +328,14 @@
 				E577D96521DDFF9200794325 /* SearchProductShop.swift in Sources */,
 				E577D97221DDFF9200794325 /* SearchProductBadge.swift in Sources */,
 				E551FF6E21DDE8A1005D6BD6 /* HomeViewModel.swift in Sources */,
+				E5FDF21321DE17DA00ABBA14 /* QuizResultViewController.swift in Sources */,
+				E5FDF20E21DE133F00ABBA14 /* QuizResultViewModel.swift in Sources */,
 				E577D96E21DDFF9200794325 /* SearchProductWholesale.swift in Sources */,
 				E551FF5321DDE486005D6BD6 /* AppDelegate.swift in Sources */,
 				E577D94F21DDFED100794325 /* AceTarget.swift in Sources */,
 				E551FF7321DDEB8E005D6BD6 /* HomeCollectionViewCell.swift in Sources */,
 				E577D96221DDFF9200794325 /* SearchProductLabel.swift in Sources */,
+				E5FDF20B21DE0B9400ABBA14 /* QuizResultUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CDEDSSA7HE;
 				INFOPLIST_FILE = TokoGemepedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +487,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -467,6 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CDEDSSA7HE;
 				INFOPLIST_FILE = TokoGemepedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,7 +509,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
