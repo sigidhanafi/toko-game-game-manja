@@ -11,9 +11,9 @@ import UIKit
 class HomeViewController: UIViewController {
     
     private var items: [Quiz] = [
-        Quiz(name: "Quiz 1", image: "capten-america", description: "wall e description"),
-        Quiz(name: "Quiz 2", image: "capten-america", description: "wall e description"),
-        Quiz(name: "Quiz 3", image: "capten-america", description: "wall e description"),
+        Quiz(name: "Game Captain Marvel", image: "capten-america", description: "wall e description"),
+        Quiz(name: "Game Lord of the ring", image: "capten-america", description: "wall e description"),
+        Quiz(name: "Game Marvel", image: "capten-america", description: "wall e description"),
         Quiz(name: "Quiz 4", image: "capten-america", description: "wall e description"),
         Quiz(name: "Quiz 5", image: "capten-america", description: "wall e description")
     ]
@@ -33,11 +33,10 @@ class HomeViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         let imageView = UIImageView(image: #imageLiteral(resourceName: "background"))
         collectionView.backgroundView = imageView
-        collectionView.showsHorizontalScrollIndicator = true
         collectionView.isPagingEnabled = true
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
@@ -73,7 +72,7 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width - 32, height: 400)
+        return CGSize(width: self.view.frame.width, height: 400)
     }
 }
 

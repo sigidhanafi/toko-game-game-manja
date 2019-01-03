@@ -13,38 +13,53 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="TokoGemepedia" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
+            <rect key="frame" x="0.0" y="0.0" width="350" height="566"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
+                <rect key="frame" x="0.0" y="0.0" width="350" height="566"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lBb-23-4aR">
-                        <rect key="frame" x="16" y="16" width="318" height="311"/>
+                        <rect key="frame" x="75" y="16" width="200" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="1Vo-td-c2M"/>
+                            <constraint firstAttribute="height" constant="200" id="6QZ-fl-PHv"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Taq-gH-kBK">
-                        <rect key="frame" x="71" y="363" width="208" height="21"/>
+                        <rect key="frame" x="66.5" y="266" width="217" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="eGN-9I-qFU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUO-VF-Czq">
+                        <rect key="frame" x="10" y="326" width="330" height="61"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="Taq-gH-kBK" firstAttribute="top" secondItem="lBb-23-4aR" secondAttribute="bottom" constant="36" id="5N9-xN-oxz"/>
-                <constraint firstItem="Taq-gH-kBK" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="PlI-3m-CPZ"/>
-                <constraint firstItem="lBb-23-4aR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Pqs-tZ-Hw9"/>
-                <constraint firstAttribute="trailing" secondItem="lBb-23-4aR" secondAttribute="trailing" constant="16" id="UAp-ME-JC4"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="Taq-gH-kBK" secondAttribute="bottom" constant="16" id="ZDC-SU-OLF"/>
+                <constraint firstAttribute="trailing" secondItem="uUO-VF-Czq" secondAttribute="trailing" constant="10" id="0IR-4f-dfW"/>
+                <constraint firstItem="uUO-VF-Czq" firstAttribute="top" secondItem="Taq-gH-kBK" secondAttribute="bottom" constant="10" id="6tc-H9-KMq"/>
+                <constraint firstItem="Taq-gH-kBK" firstAttribute="top" secondItem="lBb-23-4aR" secondAttribute="bottom" constant="50" id="EUy-Gx-oSe"/>
+                <constraint firstItem="uUO-VF-Czq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="KE9-o4-nuu"/>
+                <constraint firstItem="uUO-VF-Czq" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="OPT-gc-V4T"/>
+                <constraint firstItem="Taq-gH-kBK" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="jmv-4y-OgV"/>
+                <constraint firstItem="lBb-23-4aR" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="lzv-CJ-84x"/>
                 <constraint firstItem="lBb-23-4aR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="nik-e1-qJp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="217" height="221"/>
+            <size key="customSize" width="217" height="387"/>
             <connections>
                 <outlet property="imageView" destination="lBb-23-4aR" id="ycg-6C-czw"/>
                 <outlet property="quizTitleLabel" destination="Taq-gH-kBK" id="2X6-J2-EVV"/>
             </connections>
-            <point key="canvasLocation" x="131.19999999999999" y="113.3433283358321"/>
+            <point key="canvasLocation" x="131.19999999999999" y="188.00599700149925"/>
         </collectionViewCell>
     </objects>
 </document>
