@@ -6,9 +6,9 @@ target 'TokoGemepedia' do
   use_frameworks!
 
   # Pods for TokoGemepedia
-    pod 'RxCocoa'
-    pod 'RxSwift'
-    pod 'Moya'
-    pod 'SwiftyJSON'
+    pod 'RxSwift', '~> 4.1.2'
+    pod 'RxCocoa', '~> 4.1.2'
+    pod 'Moya/RxSwift', '~> 10.0.2'
+    pod 'SwiftyJSON', '~> 3.1.4'
 
 end
