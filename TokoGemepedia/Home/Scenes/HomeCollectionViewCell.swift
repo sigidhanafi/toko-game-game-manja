@@ -18,14 +18,17 @@ class HomeCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.layer.cornerRadius = 10
-        self.layer.borderWidth = 10
-        self.layer.borderColor = UIColor(red: 110.0/255.0, green: 80.0/255.0, blue: 140.0/255.0, alpha: 1.0).cgColor
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 2)
-        self.layer.shadowRadius = 0
-        self.layer.shadowOpacity = 0.7
+//        self.layer.cornerRadius = 10
+//        self.layer.borderWidth = 10
+//        self.layer.borderColor = UIColor(red: 110.0/255.0, green: 80.0/255.0, blue: 140.0/255.0, alpha: 1.0).cgColor
+//        self.layer.shadowColor = UIColor.black.cgColor
+//        self.layer.shadowOffset = CGSize(width: 0, height: 2)
+//        self.layer.shadowRadius = 0
+//        self.layer.shadowOpacity = 0.7
         
+        self.imageView.layer.borderColor = UIColor(red: 110.0/255.0, green: 80.0/255.0, blue: 140.0/255.0, alpha: 1.0).cgColor
+        self.imageView.layer.borderWidth = 10
         self.imageView.layer.cornerRadius = self.imageView.frame.width / 2
+        self.imageView.layer.masksToBounds = true
     }
 }

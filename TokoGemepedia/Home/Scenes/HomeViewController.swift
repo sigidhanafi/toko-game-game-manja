@@ -11,11 +11,11 @@ import UIKit
 class HomeViewController: UIViewController {
     
     private var items: [Quiz] = [
-        Quiz(name: "Quiz 1", image: "wall-e", description: "wall e description"),
-        Quiz(name: "Quiz 2", image: "wall-e", description: "wall e description"),
-        Quiz(name: "Quiz 3", image: "wall-e", description: "wall e description"),
-        Quiz(name: "Quiz 4", image: "wall-e", description: "wall e description"),
-        Quiz(name: "Quiz 5", image: "wall-e", description: "wall e description")
+        Quiz(name: "Quiz 1", image: "capten-america", description: "wall e description"),
+        Quiz(name: "Quiz 2", image: "capten-america", description: "wall e description"),
+        Quiz(name: "Quiz 3", image: "capten-america", description: "wall e description"),
+        Quiz(name: "Quiz 4", image: "capten-america", description: "wall e description"),
+        Quiz(name: "Quiz 5", image: "capten-america", description: "wall e description")
     ]
     
     init() {
@@ -35,7 +35,8 @@ class HomeViewController: UIViewController {
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectionView.backgroundColor = .white
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "background"))
+        collectionView.backgroundView = imageView
         collectionView.showsHorizontalScrollIndicator = true
         collectionView.isPagingEnabled = true
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -62,9 +63,8 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
-        cell.backgroundColor = .green
         let quiz = items[indexPath.row]
-//        cell.imageView.image = UIImage(named: quiz.image)
+        cell.imageView.image = UIImage(named: quiz.image)
         cell.quizTitleLabel.text = quiz.name
         
         return cell
