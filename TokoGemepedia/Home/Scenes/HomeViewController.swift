@@ -33,11 +33,10 @@ class HomeViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         let imageView = UIImageView(image: #imageLiteral(resourceName: "background"))
         collectionView.backgroundView = imageView
-        collectionView.showsHorizontalScrollIndicator = true
         collectionView.isPagingEnabled = true
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
