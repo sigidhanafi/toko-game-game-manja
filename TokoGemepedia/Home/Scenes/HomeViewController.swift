@@ -10,6 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    private var items: [Quiz] = [
+        Quiz(name: "Quiz 1", image: "wall-e", description: "wall e description"),
+        Quiz(name: "Quiz 2", image: "wall-e", description: "wall e description"),
+        Quiz(name: "Quiz 3", image: "wall-e", description: "wall e description"),
+        Quiz(name: "Quiz 4", image: "wall-e", description: "wall e description"),
+        Quiz(name: "Quiz 5", image: "wall-e", description: "wall e description")
+    ]
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -17,12 +25,58 @@ class HomeViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
+        collectionView.showsHorizontalScrollIndicator = true
+        collectionView.isPagingEnabled = true
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
+        view.addSubview(collectionView)
+        collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
-
-
 }
 
+extension HomeViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
+        cell.backgroundColor = .green
+        let quiz = items[indexPath.row]
+//        cell.imageView.image = UIImage(named: quiz.image)
+        cell.quizTitleLabel.text = quiz.name
+        
+        return cell
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width - 32, height: 400)
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    
+}

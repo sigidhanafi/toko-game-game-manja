@@ -12,6 +12,9 @@
 		E551FF5A21DDE488005D6BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E551FF5921DDE488005D6BD6 /* Assets.xcassets */; };
 		E551FF5D21DDE488005D6BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E551FF5B21DDE488005D6BD6 /* LaunchScreen.storyboard */; };
 		E551FF6E21DDE8A1005D6BD6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF6D21DDE8A1005D6BD6 /* HomeViewModel.swift */; };
+		E551FF7321DDEB8E005D6BD6 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF7121DDEB8E005D6BD6 /* HomeCollectionViewCell.swift */; };
+		E551FF7421DDEB8E005D6BD6 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E551FF7221DDEB8E005D6BD6 /* HomeCollectionViewCell.xib */; };
+		E551FF7821DDED6F005D6BD6 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF7721DDED6F005D6BD6 /* Quiz.swift */; };
 		FB39D6D017D1F34AACEDE5DE /* Pods_TokoGemepedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C34817B0B7564BEC3B85D4B /* Pods_TokoGemepedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		E551FF5C21DDE488005D6BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E551FF5E21DDE488005D6BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E551FF6D21DDE8A1005D6BD6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E551FF7121DDEB8E005D6BD6 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E551FF7221DDEB8E005D6BD6 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		E551FF7721DDED6F005D6BD6 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		EC09F12ED923751333969655 /* Pods-TokoGemepedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoGemepedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +98,7 @@
 		E551FF6421DDE7D3005D6BD6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E551FF6821DDE817005D6BD6 /* Domain */,
+				E551FF7921DDF716005D6BD6 /* Domain */,
 				E551FF6721DDE805005D6BD6 /* Scenes */,
 			);
 			path = Home;
@@ -121,15 +127,10 @@
 			children = (
 				E551FF5421DDE486005D6BD6 /* HomeViewController.swift */,
 				E551FF6D21DDE8A1005D6BD6 /* HomeViewModel.swift */,
+				E551FF7121DDEB8E005D6BD6 /* HomeCollectionViewCell.swift */,
+				E551FF7221DDEB8E005D6BD6 /* HomeCollectionViewCell.xib */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		E551FF6821DDE817005D6BD6 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		E551FF6921DDE821005D6BD6 /* Scenes */ = {
@@ -156,6 +157,14 @@
 		E551FF6C21DDE839005D6BD6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E551FF7921DDF716005D6BD6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E551FF7721DDED6F005D6BD6 /* Quiz.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -221,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E551FF5D21DDE488005D6BD6 /* LaunchScreen.storyboard in Resources */,
+				E551FF7421DDEB8E005D6BD6 /* HomeCollectionViewCell.xib in Resources */,
 				E551FF5A21DDE488005D6BD6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,8 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E551FF5521DDE486005D6BD6 /* HomeViewController.swift in Sources */,
+				E551FF7821DDED6F005D6BD6 /* Quiz.swift in Sources */,
 				E551FF6E21DDE8A1005D6BD6 /* HomeViewModel.swift in Sources */,
 				E551FF5321DDE486005D6BD6 /* AppDelegate.swift in Sources */,
+				E551FF7321DDEB8E005D6BD6 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
