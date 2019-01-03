@@ -13,11 +13,14 @@ import RxSwift
 internal class QuizResultViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var resultLabel: UILabel!
     private let disposeBag = DisposeBag()
     private let viewModel: QuizResultViewModel
+    private let result: ResultArray
     private var items: [SearchResultProduct] = []
     
-    internal init(keywords: [String]) {
+    internal init(result: ResultArray, keywords: [String]) {
+        self.result = result
         self.viewModel = QuizResultViewModel(keywords: keywords, useCase: QuizResultUseCase())
         super.init(nibName: nil, bundle: nil)
     }
@@ -48,6 +51,8 @@ internal class QuizResultViewController: UIViewController {
                 self.collectionView.reloadData()
             })
             .disposed(by: disposeBag)
+        
+        resultLabel.text = result.result
     }
 }
 

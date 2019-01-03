@@ -72,5 +72,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension HomeViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = QuizViewController(quiz: items[indexPath.row])
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

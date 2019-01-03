@@ -213,37 +213,27 @@ internal class QuestionData {
         {
         "answer": "Hitam",
         "value": 1,
-        "keyword": [
-        "hitam"
-        ]
+        "keyword": []
         },
         {
         "answer": "Merah",
         "value": 3,
-        "keyword": [
-        "merah"
-        ]
+        "keyword": []
         },
         {
         "answer": "Biru",
         "value": 5,
-        "keyword": [
-        "biru"
-        ]
+        "keyword": []
         },
         {
         "answer": "Hijau",
         "value": 7,
-        "keyword": [
-        "hijau"
-        ]
+        "keyword": []
         },
         {
         "answer": "Kuning",
         "value": 9,
-        "keyword": [
-        "kuning"
-        ]
+        "keyword": []
         }
         ]
         }

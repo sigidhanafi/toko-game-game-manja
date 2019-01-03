@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.backgroundColor = .white
         let homePage = HomeViewController()
-        let resultPage = QuizResultViewController(keywords: ["samsung", "pulpen", "anjing", "kaos"])
         let nav = UINavigationController.init(rootViewController: homePage)
         window.rootViewController = nav
         window.makeKeyAndVisible()

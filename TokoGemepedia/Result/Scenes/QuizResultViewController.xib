@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizResultViewController" customModule="TokoGemepedia" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="yag-fJ-KeF" id="kor-38-6x1"/>
+                <outlet property="resultLabel" destination="Hvc-z1-V46" id="y7J-xe-Tqq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

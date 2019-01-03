@@ -15,7 +15,7 @@ struct QuizResult: Codable {
 struct Quize: Codable {
     let title, image: String
     let resultArray: [ResultArray]
-    let questions: [Question]
+    var questions: [Question]
     
     enum CodingKeys: String, CodingKey {
         case title, image
