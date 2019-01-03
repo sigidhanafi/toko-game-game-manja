@@ -40,10 +40,6 @@ internal class QuizResultViewModel {
                 return Driver.merge(products)
         }
         
-        let cek = recommendationProduct.flatMap { (product) -> Driver<[SearchResultProduct]> in
-            return Driver.just(product)
-        }
-        
         return Output(recommendationProduct: recommendationProduct)
     }
 }

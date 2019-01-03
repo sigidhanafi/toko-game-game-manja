@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E538F70321DE2FBE00A362BF /* ProductResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538F6FC21DE2FBD00A362BF /* ProductResultCollectionViewCell.swift */; };
+		E538F70421DE2FBE00A362BF /* ProductResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E538F6FD21DE2FBD00A362BF /* ProductResultCollectionViewCell.xib */; };
+		E538F70821DE2FBE00A362BF /* ProductResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538F70121DE2FBD00A362BF /* ProductResultCellViewModel.swift */; };
 		E551FF5321DDE486005D6BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF5221DDE486005D6BD6 /* AppDelegate.swift */; };
 		E551FF5521DDE486005D6BD6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF5421DDE486005D6BD6 /* HomeViewController.swift */; };
 		E551FF5A21DDE488005D6BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E551FF5921DDE488005D6BD6 /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 /* Begin PBXFileReference section */
 		2F79136FAD422229F34710C6 /* Pods-TokoGemepedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoGemepedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia.release.xcconfig"; sourceTree = "<group>"; };
 		8C34817B0B7564BEC3B85D4B /* Pods_TokoGemepedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokoGemepedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E538F6FC21DE2FBD00A362BF /* ProductResultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductResultCollectionViewCell.swift; sourceTree = "<group>"; };
+		E538F6FD21DE2FBD00A362BF /* ProductResultCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductResultCollectionViewCell.xib; sourceTree = "<group>"; };
+		E538F70121DE2FBD00A362BF /* ProductResultCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductResultCellViewModel.swift; sourceTree = "<group>"; };
 		E551FF4F21DDE486005D6BD6 /* TokoGemepedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokoGemepedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E551FF5221DDE486005D6BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E551FF5421DDE486005D6BD6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +87,16 @@
 				2F79136FAD422229F34710C6 /* Pods-TokoGemepedia.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E538F6FB21DE2FBD00A362BF /* SearchProduct */ = {
+			isa = PBXGroup;
+			children = (
+				E538F6FC21DE2FBD00A362BF /* ProductResultCollectionViewCell.swift */,
+				E538F6FD21DE2FBD00A362BF /* ProductResultCollectionViewCell.xib */,
+				E538F70121DE2FBD00A362BF /* ProductResultCellViewModel.swift */,
+			);
+			path = SearchProduct;
 			sourceTree = "<group>";
 		};
 		E551FF4621DDE486005D6BD6 = {
@@ -179,6 +195,7 @@
 				E5FDF20D21DE133F00ABBA14 /* QuizResultViewModel.swift */,
 				E5FDF21121DE17DA00ABBA14 /* QuizResultViewController.swift */,
 				E5FDF21221DE17DA00ABBA14 /* QuizResultViewController.xib */,
+				E538F6FB21DE2FBD00A362BF /* SearchProduct */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -246,6 +263,7 @@
 			files = (
 				E5FDF21421DE17DA00ABBA14 /* QuizResultViewController.xib in Resources */,
 				E551FF5D21DDE488005D6BD6 /* LaunchScreen.storyboard in Resources */,
+				E538F70421DE2FBE00A362BF /* ProductResultCollectionViewCell.xib in Resources */,
 				E551FF7421DDEB8E005D6BD6 /* HomeCollectionViewCell.xib in Resources */,
 				E551FF5A21DDE488005D6BD6 /* Assets.xcassets in Resources */,
 			);
@@ -295,6 +313,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TokoGemepedia/Pods-TokoGemepedia-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -304,6 +323,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -325,6 +345,7 @@
 				E577D96D21DDFF9200794325 /* SearchResultProduct.swift in Sources */,
 				E551FF5521DDE486005D6BD6 /* HomeViewController.swift in Sources */,
 				E551FF7821DDED6F005D6BD6 /* Quiz.swift in Sources */,
+				E538F70321DE2FBE00A362BF /* ProductResultCollectionViewCell.swift in Sources */,
 				E577D96521DDFF9200794325 /* SearchProductShop.swift in Sources */,
 				E577D97221DDFF9200794325 /* SearchProductBadge.swift in Sources */,
 				E551FF6E21DDE8A1005D6BD6 /* HomeViewModel.swift in Sources */,
@@ -334,6 +355,7 @@
 				E551FF5321DDE486005D6BD6 /* AppDelegate.swift in Sources */,
 				E577D94F21DDFED100794325 /* AceTarget.swift in Sources */,
 				E551FF7321DDEB8E005D6BD6 /* HomeCollectionViewCell.swift in Sources */,
+				E538F70821DE2FBE00A362BF /* ProductResultCellViewModel.swift in Sources */,
 				E577D96221DDFF9200794325 /* SearchProductLabel.swift in Sources */,
 				E5FDF20B21DE0B9400ABBA14 /* QuizResultUseCase.swift in Sources */,
 			);

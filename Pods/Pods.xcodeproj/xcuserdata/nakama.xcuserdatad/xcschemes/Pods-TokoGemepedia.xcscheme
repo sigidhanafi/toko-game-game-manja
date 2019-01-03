@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "706C4DB1C8AFFD63468CDBF3921097DF"
+               BlueprintIdentifier = "55C3A5BAA414F0BF0F8DF6CBF30A9243"
                BuildableName = "Pods_TokoGemepedia.framework"
                BlueprintName = "Pods-TokoGemepedia"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "706C4DB1C8AFFD63468CDBF3921097DF"
+            BlueprintIdentifier = "55C3A5BAA414F0BF0F8DF6CBF30A9243"
             BuildableName = "Pods_TokoGemepedia.framework"
             BlueprintName = "Pods-TokoGemepedia"
             ReferencedContainer = "container:Pods.xcodeproj">

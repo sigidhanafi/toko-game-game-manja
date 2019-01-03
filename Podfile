@@ -10,5 +10,6 @@ target 'TokoGemepedia' do
     pod 'RxCocoa', '~> 4.1.2'
     pod 'Moya/RxSwift', '~> 10.0.2'
     pod 'SwiftyJSON', '~> 3.1.4'
+    pod 'FLEX', '~> 2.0', :configurations => ['Debug']
 
 end

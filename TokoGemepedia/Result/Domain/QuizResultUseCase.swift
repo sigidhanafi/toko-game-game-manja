@@ -16,11 +16,13 @@ protocol DefaultQuizResultUseCase {
 }
 
 class QuizResultUseCase: DefaultQuizResultUseCase {
+    let provider = MoyaProvider<AceTarget>()
+
     func recommendationProduct(query: String) -> Observable<[SearchResultProduct]> {
-        let provider = MoyaProvider<AceTarget>()
+        
         return provider
             .rx
-            .request(AceTarget.getProduct(query: query))
+            .request(.getProduct(query: query))
             .asObservable()
             .flatMap({ (response: Response) -> Observable<[SearchResultProduct]> in
                 let responseJSON = JSON(response.data)

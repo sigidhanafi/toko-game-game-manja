@@ -40,15 +40,19 @@ extension AceTarget: TargetType {
         return .get
     }
     
-    public var task: Task {
-        return .requestParameters(parameters: parameters ?? [:], encoding: URLEncoding.default)
+    public var parameterEncoding: ParameterEncoding {
+        switch self {
+        default: return URLEncoding.default
+        }
     }
+    
+    public var task: Task { return .requestParameters(parameters: parameters ?? [:], encoding: parameterEncoding) }
     
     public var sampleData: Data {
         return "{ \"data\": 123 }".data(using: .utf8)!
     }
     
-    public var headers: [String: String]? {
-        return [ "Authorization" : "team3rdpartyanvato123OK!001" ]
+    public var headers: [String : String]? {
+        return nil
     }
 }
