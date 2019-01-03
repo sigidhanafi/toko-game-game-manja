@@ -12,6 +12,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
 //
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var quizTitleLabel: UILabel!
+    @IBOutlet weak var quizDescriptionLabel: UILabel!
     
     static let identifier = "HomeCollectionViewCell"
     

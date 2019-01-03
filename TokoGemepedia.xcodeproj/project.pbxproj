@@ -10,6 +10,8 @@
 		E538F70321DE2FBE00A362BF /* ProductResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538F6FC21DE2FBD00A362BF /* ProductResultCollectionViewCell.swift */; };
 		E538F70421DE2FBE00A362BF /* ProductResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E538F6FD21DE2FBD00A362BF /* ProductResultCollectionViewCell.xib */; };
 		E538F70821DE2FBE00A362BF /* ProductResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538F70121DE2FBD00A362BF /* ProductResultCellViewModel.swift */; };
+		E538F70B21DE376000A362BF /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538F70A21DE376000A362BF /* QuizResult.swift */; };
+		E538F70E21DE37BA00A362BF /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538F70D21DE37BA00A362BF /* QuestionData.swift */; };
 		E551FF5321DDE486005D6BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF5221DDE486005D6BD6 /* AppDelegate.swift */; };
 		E551FF5521DDE486005D6BD6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF5421DDE486005D6BD6 /* HomeViewController.swift */; };
 		E551FF5A21DDE488005D6BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E551FF5921DDE488005D6BD6 /* Assets.xcassets */; };
@@ -17,7 +19,6 @@
 		E551FF6E21DDE8A1005D6BD6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF6D21DDE8A1005D6BD6 /* HomeViewModel.swift */; };
 		E551FF7321DDEB8E005D6BD6 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF7121DDEB8E005D6BD6 /* HomeCollectionViewCell.swift */; };
 		E551FF7421DDEB8E005D6BD6 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E551FF7221DDEB8E005D6BD6 /* HomeCollectionViewCell.xib */; };
-		E551FF7821DDED6F005D6BD6 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FF7721DDED6F005D6BD6 /* Quiz.swift */; };
 		E577D94F21DDFED100794325 /* AceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D94E21DDFED100794325 /* AceTarget.swift */; };
 		E577D96221DDFF9200794325 /* SearchProductLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D95121DDFF9200794325 /* SearchProductLabel.swift */; };
 		E577D96521DDFF9200794325 /* SearchProductShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D95421DDFF9200794325 /* SearchProductShop.swift */; };
@@ -37,6 +38,8 @@
 		E538F6FC21DE2FBD00A362BF /* ProductResultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		E538F6FD21DE2FBD00A362BF /* ProductResultCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		E538F70121DE2FBD00A362BF /* ProductResultCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductResultCellViewModel.swift; sourceTree = "<group>"; };
+		E538F70A21DE376000A362BF /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
+		E538F70D21DE37BA00A362BF /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		E551FF4F21DDE486005D6BD6 /* TokoGemepedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokoGemepedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E551FF5221DDE486005D6BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E551FF5421DDE486005D6BD6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +49,6 @@
 		E551FF6D21DDE8A1005D6BD6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E551FF7121DDEB8E005D6BD6 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E551FF7221DDEB8E005D6BD6 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
-		E551FF7721DDED6F005D6BD6 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		E577D94E21DDFED100794325 /* AceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AceTarget.swift; sourceTree = "<group>"; };
 		E577D95121DDFF9200794325 /* SearchProductLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductLabel.swift; sourceTree = "<group>"; };
 		E577D95421DDFF9200794325 /* SearchProductShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductShop.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 			path = SearchProduct;
 			sourceTree = "<group>";
 		};
+		E538F70C21DE37A500A362BF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E538F70D21DE37BA00A362BF /* QuestionData.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		E551FF4621DDE486005D6BD6 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 		E551FF5121DDE486005D6BD6 /* TokoGemepedia */ = {
 			isa = PBXGroup;
 			children = (
+				E538F70C21DE37A500A362BF /* Utility */,
 				E577D94B21DDFEBC00794325 /* Result */,
 				E551FF6421DDE7D3005D6BD6 /* Home */,
 				E551FF5221DDE486005D6BD6 /* AppDelegate.swift */,
@@ -153,7 +164,7 @@
 		E551FF7921DDF716005D6BD6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				E551FF7721DDED6F005D6BD6 /* Quiz.swift */,
+				E538F70A21DE376000A362BF /* QuizResult.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -344,16 +355,17 @@
 			files = (
 				E577D96D21DDFF9200794325 /* SearchResultProduct.swift in Sources */,
 				E551FF5521DDE486005D6BD6 /* HomeViewController.swift in Sources */,
-				E551FF7821DDED6F005D6BD6 /* Quiz.swift in Sources */,
 				E538F70321DE2FBE00A362BF /* ProductResultCollectionViewCell.swift in Sources */,
 				E577D96521DDFF9200794325 /* SearchProductShop.swift in Sources */,
 				E577D97221DDFF9200794325 /* SearchProductBadge.swift in Sources */,
 				E551FF6E21DDE8A1005D6BD6 /* HomeViewModel.swift in Sources */,
 				E5FDF21321DE17DA00ABBA14 /* QuizResultViewController.swift in Sources */,
 				E5FDF20E21DE133F00ABBA14 /* QuizResultViewModel.swift in Sources */,
+				E538F70E21DE37BA00A362BF /* QuestionData.swift in Sources */,
 				E577D96E21DDFF9200794325 /* SearchProductWholesale.swift in Sources */,
 				E551FF5321DDE486005D6BD6 /* AppDelegate.swift in Sources */,
 				E577D94F21DDFED100794325 /* AceTarget.swift in Sources */,
+				E538F70B21DE376000A362BF /* QuizResult.swift in Sources */,
 				E551FF7321DDEB8E005D6BD6 /* HomeCollectionViewCell.swift in Sources */,
 				E538F70821DE2FBE00A362BF /* ProductResultCellViewModel.swift in Sources */,
 				E577D96221DDFF9200794325 /* SearchProductLabel.swift in Sources */,

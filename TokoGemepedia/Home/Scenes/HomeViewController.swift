@@ -10,13 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    private var items: [Quiz] = [
-        Quiz(name: "Game Captain Marvel", image: "capten-america", description: "wall e description"),
-        Quiz(name: "Game Lord of the ring", image: "capten-america", description: "wall e description"),
-        Quiz(name: "Game Marvel", image: "capten-america", description: "wall e description"),
-        Quiz(name: "Quiz 4", image: "capten-america", description: "wall e description"),
-        Quiz(name: "Quiz 5", image: "capten-america", description: "wall e description")
-    ]
+    private var items: [Quize] = QuestionData.generateQuestion().quizes
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -64,7 +58,8 @@ extension HomeViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
         let quiz = items[indexPath.row]
         cell.imageView.image = UIImage(named: quiz.image)
-        cell.quizTitleLabel.text = quiz.name
+        cell.quizTitleLabel.text = quiz.title
+        cell.quizDescriptionLabel.text = ""
         
         return cell
     }
