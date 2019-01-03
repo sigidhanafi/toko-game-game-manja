@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.backgroundColor = .white
         let nav = UINavigationController.init(rootViewController: HomeViewController())
+        nav.isNavigationBarHidden = true
         window.rootViewController = nav
         window.makeKeyAndVisible()
         self.window = window
