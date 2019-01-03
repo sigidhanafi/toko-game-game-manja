@@ -7,27 +7,27 @@
 //
 
 #if TRACE_RESOURCES
-    fileprivate var resourceCount = AtomicInt(0)
+    fileprivate var resourceCount: AtomicInt = 0
 
     /// Resource utilization information
     public struct Resources {
         /// Counts internal Rx resource allocations (Observables, Observers, Disposables, etc.). This provides a simple way to detect leaks during development.
         public static var total: Int32 {
-            return resourceCount.load()
+            return resourceCount.valueSnapshot()
         }
 
         /// Increments `Resources.total` resource count.
         ///
         /// - returns: New resource count
         public static func incrementTotal() -> Int32 {
-            return resourceCount.increment()
+            return AtomicIncrement(&resourceCount)
         }
 
         /// Decrements `Resources.total` resource count
         ///
         /// - returns: New resource count
         public static func decrementTotal() -> Int32 {
-            return resourceCount.decrement()
+            return AtomicDecrement(&resourceCount)
         }
     }
 #endif
@@ -71,7 +71,7 @@ func decrementChecked(_ i: inout Int) throws -> Int {
     final class SynchronizationTracker {
         private let _lock = RecursiveLock()
 
-        public enum SynchronizationErrorMessages: String {
+        public enum SychronizationErrorMessages: String {
             case variable = "Two different threads are trying to assign the same `Variable.value` unsynchronized.\n    This is undefined behavior because the end result (variable value) is nondeterministic and depends on the \n    operating system thread scheduler. This will cause random behavior of your program.\n"
             case `default` = "Two different unsynchronized threads are trying to send some event simultaneously.\n    This is undefined behavior because the ordering of the effects caused by these events is nondeterministic and depends on the \n    operating system thread scheduler. This will result in a random behavior of your program.\n"
         }
@@ -86,7 +86,7 @@ func decrementChecked(_ i: inout Int) throws -> Int {
             #endif
         }
         
-        func register(synchronizationErrorMessage: SynchronizationErrorMessages) {
+        func register(synchronizationErrorMessage: SychronizationErrorMessages) {
             _lock.lock(); defer { _lock.unlock() }
             let pointer = Unmanaged.passUnretained(Thread.current).toOpaque()
             let count = (_threads[pointer] ?? 0) + 1

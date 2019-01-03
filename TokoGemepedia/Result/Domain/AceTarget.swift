@@ -44,9 +44,6 @@ extension AceTarget: TargetType {
         return .requestParameters(parameters: parameters ?? [:], encoding: URLEncoding.default)
     }
     
-    public var validationType: ValidationType {
-        return .none
-    }
     public var sampleData: Data {
         return "{ \"data\": 123 }".data(using: .utf8)!
     }
