@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="TokoGemepedia" customModuleProvider="target">
             <connections>
+                <outlet property="fifthQuestionButton" destination="z8m-EY-sns" id="ez6-N7-iy6"/>
                 <outlet property="firstQuestionButton" destination="Zif-bz-Ogx" id="QFM-jf-SJr"/>
                 <outlet property="fourthQuestionButton" destination="c7j-KU-nbj" id="dhB-ao-PRY"/>
                 <outlet property="questionLabel" destination="1sr-cR-KKF" id="jng-0x-ri8"/>
@@ -31,7 +32,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yC5-I6-qOh">
-                    <rect key="frame" x="16" y="72.5" width="343" height="168"/>
+                    <rect key="frame" x="16" y="72.5" width="343" height="214"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zif-bz-Ogx">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -49,6 +50,10 @@
                             <rect key="frame" x="0.0" y="138" width="343" height="30"/>
                             <state key="normal" title="Button"/>
                         </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8m-EY-sns">
+                            <rect key="frame" x="0.0" y="184" width="343" height="30"/>
+                            <state key="normal" title="Button"/>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>
@@ -62,6 +67,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1sr-cR-KKF" secondAttribute="trailing" constant="16" id="uBa-CH-CnQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="58" y="-740"/>
         </view>
     </objects>
 </document>

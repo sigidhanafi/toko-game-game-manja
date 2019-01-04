@@ -17,7 +17,8 @@ internal class QuizViewController: UIViewController {
     @IBOutlet internal weak var secondQuestionButton: UIButton!
     @IBOutlet internal weak var thirdQuestionButton: UIButton!
     @IBOutlet internal weak var fourthQuestionButton: UIButton!
-
+    @IBOutlet internal weak var fifthQuestionButton: UIButton!
+    
     private let disposeBag = DisposeBag()
     private let viewModel: QuizViewModel
     private let selectedOption: BehaviorRelay<Int> = BehaviorRelay(value: 0)
@@ -47,6 +48,7 @@ internal class QuizViewController: UIViewController {
         output.secondOption.drive(secondQuestionButton.rx.title()).disposed(by: disposeBag)
         output.thirdOption.drive(thirdQuestionButton.rx.title()).disposed(by: disposeBag)
         output.fourthOption.drive(fourthQuestionButton.rx.title()).disposed(by: disposeBag)
+        output.fifthOption.drive(fifthQuestionButton.rx.title()).disposed(by: disposeBag)
         output
             .redirectToResultPage
             .drive(onNext: { (data: (keywords: [String], result: ResultArray)) in
@@ -91,6 +93,15 @@ internal class QuizViewController: UIViewController {
             .asDriver()
             .drive(onNext: { _ in
                 self.selectedOption.accept(self.fourthQuestionButton.tag)
+            })
+            .disposed(by: disposeBag)
+        
+        fifthQuestionButton
+            .rx
+            .tap
+            .asDriver()
+            .drive(onNext: { _ in
+                self.selectedOption.accept(self.fifthQuestionButton.tag)
             })
             .disposed(by: disposeBag)
     }
