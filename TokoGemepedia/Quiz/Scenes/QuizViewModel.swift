@@ -22,7 +22,7 @@ internal class QuizViewModel {
         internal let thirdOption: Driver<String>
         internal let fourthOption: Driver<String>
         internal let fifthOption: Driver<String>
-        internal let redirectToResultPage: Driver<(keywords: [String], result: ResultArray)>
+        internal let redirectToResultPage: Driver<(keywords: [String], adsKeywords: [String], result: ResultArray)>
     }
     
     private let quiz: Quize
@@ -98,12 +98,13 @@ internal class QuizViewModel {
         
         let redirectToResultPage = shouldRedirectToResult
             .filter { $0 }
-            .flatMap ({ [weak self] _ -> Driver<(keywords: [String], result: ResultArray)> in
+            .flatMap ({ [weak self] _ -> Driver<(keywords: [String], adsKeywords: [String], result: ResultArray)> in
                 guard let `self` = self else { return .empty() }
                 guard let findResult = self.quiz.resultArray.first(where: { (result: ResultArray) -> Bool in
                     return currentScore > result.min && currentScore <= result.max
                 }) else { return .empty() }
-                return Driver.just((keywords: currentKeywords, result: findResult))
+                
+                return Driver.just((keywords: findResult.keywords, adsKeywords: currentKeywords, result: findResult))
             })
         
         return Output(question: question.asDriver(),

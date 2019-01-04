@@ -51,8 +51,8 @@ internal class QuizViewController: UIViewController {
         output.fifthOption.drive(fifthQuestionButton.rx.title()).disposed(by: disposeBag)
         output
             .redirectToResultPage
-            .drive(onNext: { (data: (keywords: [String], result: ResultArray)) in
-                let vc = QuizResultViewController(result: data.result, keywords: data.keywords)
+            .drive(onNext: { (data: (keywords: [String], adsKeywords: [String], result: ResultArray)) in
+                let vc = QuizResultViewController(result: data.result, keywords: data.keywords, adsKeywords: data.adsKeywords)
                 self.navigationController?.pushViewController(vc, animated: true)
                 self.navigationController?.viewControllers.removeAll(where: { $0 == self })
             })

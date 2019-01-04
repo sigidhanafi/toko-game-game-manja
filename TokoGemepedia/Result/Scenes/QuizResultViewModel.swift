@@ -16,17 +16,32 @@ internal class QuizResultViewModel {
     
     internal struct Output {
         public let recommendationProduct: Driver<[SearchResultProduct]>
+        public let adsProduct: Driver<[SearchResultProduct]>
     }
     
     private let useCase: DefaultQuizResultUseCase
     private let keywords: [String]
+    private let adsKeywords: [String]
     
-    internal init(keywords: [String], useCase: DefaultQuizResultUseCase) {
+    internal init(keywords: [String], adsKeywords: [String], useCase: DefaultQuizResultUseCase) {
         self.keywords = keywords
+        self.adsKeywords = adsKeywords
         self.useCase = useCase
     }
     
     internal func transform(input: Input) -> Output {
+        
+        let adsProduct = input
+            .didLoad
+            .flatMap { [adsKeywords, useCase] _ -> Driver<[SearchResultProduct]> in
+                let products = adsKeywords.map ({ (value) -> Driver<[SearchResultProduct]> in
+                    return useCase
+                        .recommendationProduct(query: value)
+                        .asDriver(onErrorJustReturn: [])
+                })
+                
+                return Driver.merge(products)
+        }
         
         let recommendationProduct = input
             .didLoad
@@ -40,6 +55,7 @@ internal class QuizResultViewModel {
                 return Driver.merge(products)
         }
         
-        return Output(recommendationProduct: recommendationProduct)
+        return Output(recommendationProduct: recommendationProduct,
+                      adsProduct: adsProduct)
     }
 }

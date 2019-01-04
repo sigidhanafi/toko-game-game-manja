@@ -15,7 +15,7 @@ struct QuizResult: Codable {
 struct Quize: Codable {
     let title, image: String
     let resultArray: [ResultArray]
-    var questions: [Question]
+    let questions: [Question]
     
     enum CodingKeys: String, CodingKey {
         case title, image
@@ -38,5 +38,6 @@ struct Option: Codable {
 struct ResultArray: Codable {
     let min, max: Int
     let result, desc: String
+    let keywords: [String]
 }
 
